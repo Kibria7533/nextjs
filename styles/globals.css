@@ -14,3 +14,17 @@ a {
 * {
   box-sizing: border-box;
 }
+.container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5px;
+  grid-template-rows: repeat(1fr,4);
+  
+}
+.container.card{
+  grid-area: card;
+  box-sizing: border-box;
+  border: 5px solid rgb(231, 163, 163);
+  margin: 5px;
+  box-shadow: blue 5px;
+}
