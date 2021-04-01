@@ -15,6 +15,12 @@ import {phpBank,jsBank,pythonBank} from '../components/Bank'
 export default function Home() {
   const [Modal, showModal] = useState(false);
   const [ques,setQues]=useState([])
+  const [User,setUser]=useState({
+userid:"",
+name:"",
+email:"",
+picture:""
+  }) 
   const [state, setstate] = useState([
     {
       id: 1,
@@ -43,6 +49,12 @@ export default function Home() {
     showModal(true)
   }
   const responseFacebook = (response) => {
+    const newuser={...User}
+    newuser.name=response.name;
+    newuser.userid=response.userId;
+    newuser.email=response.email,
+    newuser.picture=response.picture.data.url
+    setUser(newuser)
     console.log(response);
   }
   return (
@@ -80,6 +92,7 @@ export default function Home() {
 
         </ul>
       </div>
+      <img src={User.picture} alt="Profile-image"/>
       <div className="dynamic-text"> <div
         style={{
           height: '100vh',
@@ -92,7 +105,7 @@ export default function Home() {
         <MyCard color="#F76A5B" title="JS" onClick={jsclick} />
         <MyCard color="#164843" title="PYTHON" onClick={pythonclick} />
       </div></div>
-      <div className="profile-icon"><Avatar facebookId="1719419154931567" size="50" /></div>
+      <div className="profile-icon"><Avatar facebookId={User.userid} size="50" /></div>
       <div className="facebook-icon"><FacebookLogin
         appId="1080000269162058"
         autoLoad={true}
