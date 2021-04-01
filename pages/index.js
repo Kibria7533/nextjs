@@ -92,7 +92,7 @@ export default function Home() {
         <MyCard color="#F76A5B" title="JS" onClick={jsclick} />
         <MyCard color="#164843" title="PYTHON" onClick={pythonclick} />
       </div></div>
-      <div className="profile-icon"><Avatar facebookId="100005904976462" size="50" /></div>
+      <div className="profile-icon"><Avatar facebookId="1719419154931567" size="50" /></div>
       <div className="facebook-icon"><FacebookLogin
         appId="1080000269162058"
         autoLoad={true}
