@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "next": "10.1.1",
     "react": "17.0.2",
     "react-animated-3d-card": "^1.0.2",

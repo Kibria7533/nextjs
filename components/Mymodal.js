@@ -5,6 +5,7 @@ import 'simple-react-animated-modal/dist/index.css';
 import UrgeWithPleasureComponent from './CountDown'
  
 const Mymodal=(props)=> {
+  
   const [showModal, setShowModal] = useState(false);
  
   return (
@@ -15,7 +16,7 @@ const Mymodal=(props)=> {
         show={props.show}
         title={props.title}
          onHide={() => props.hide(false)}
-        closeButton={<>{props.title}<UrgeWithPleasureComponent hideme={props.hide}/></>}
+        closeButton={<>'jhjjj'</>}
         style={{
           backgroundColor: '#1e2939',
           border: '2px solid #1cc5b7',
@@ -30,17 +31,19 @@ const Mymodal=(props)=> {
       >
         <div className="modal-body">
 
-          {props.questions.map((item,index)=>{
+          {props.questions.map((item,mainindex)=>{
             return(
-            < >
+            <p key={mainindex}>
            <p>{item.question}</p>
            <ul>
-             <li>{item.answers[0]}</li>
-             <li>{item.answers[1]}</li>
-             <li>{item.answers[2]}</li>
-             <li>{item.answers[3]}</li>
+             {item.answers.map((ans,index)=>{
+               return(
+                <li key={index}onClick={()=>props.checkclick(ans,mainindex)}>{ans}</li>
+               )
+             })}
            </ul>
-           </>
+           {/* <UrgeWithPleasureComponent pointsave={props.pointsave} hideme={props.hide}/> */}
+           </p>
             )
           })}
           

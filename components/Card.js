@@ -3,6 +3,7 @@ import React from 'react'
 import Card from 'react-animated-3d-card'
 
 const MyCard = (props) => {
+
   return (
     <Card
       style={{
@@ -39,6 +40,7 @@ const MyCard = (props) => {
           alt='credit card chip'
         ></img> */}
       </div>
+      
       <div
         style={{
           height: '100%',
@@ -59,7 +61,7 @@ const MyCard = (props) => {
           
         </div>
       </div>
-      <div>
+      {/* <div>
         <label
           style={{
             color: 'white',
@@ -80,11 +82,12 @@ const MyCard = (props) => {
             opacity: 0.5
           }}
         >
-         76
+         {props.at}
+         
         </label>
-      </div>
+      </div> */}
 
-      <div>
+      {/* <div>
         <label
           style={{
             color: 'white',
@@ -107,9 +110,9 @@ const MyCard = (props) => {
             fontSize: '25px'
           }}
         >
-          10
+          {props.ex}
         </label>
-      </div>
+      </div> */}
     
     </Card>
   )

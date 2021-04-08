@@ -4,11 +4,12 @@ const UrgeWithPleasureComponent = (props) => (
     <CountdownCircleTimer
       onComplete={() => {
         // do your stuff here
+        // props.pointsave()
         props.hideme(false)
-        return [true, 1] // repeat animation in 1.5 seconds
+        //  return [true, 100] // repeat animation in 1.5 seconds
       }}
       isPlaying
-      duration={10}
+      duration={15}
       colors="#A30000"
       size={50}
     />
